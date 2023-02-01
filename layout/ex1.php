@@ -55,7 +55,7 @@ echo "
 ?>
 
 <h3>4 screenshot of development environment</h3>
-<img src="envirnImage" alt="Environment image">
+<img src="envirnImage.jpg" alt="Environment image" style="width: 75%;">
 </body>
 
 <?php include("footer.php");?>
