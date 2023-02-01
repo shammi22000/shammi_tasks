@@ -1,6 +1,6 @@
 
 <?php
-$title = "Exersice page";
+$title = "Exercise page";
 include("header.php");?>
 <h3>3.1 Write a simple PHP script to print your information (Name and your groupid).</h3>
     <?php
@@ -18,11 +18,13 @@ include("header.php");?>
     <?php
     echo "<h3>",date("d.m.Y"),"</h3>";
     ?>
+    <br>
 <h3>3.4 Variable in php</h3>
     <?php
     $title1="PHP is interesting";
     echo "<h1>".$title."</h1>";
     ?>
+    <br>
 <h3>3.5 Tables and Variables</h3>
 <?php
 $g1 = 5;
@@ -30,7 +32,7 @@ $g2 = 4;
 $g3 = 5;
 
 echo "
-<table>
+<table border=1  width=70%>
     <tr>
         <th>S.N</th>
         <th>Name</th>
@@ -53,7 +55,7 @@ echo "
     </tr>
 </table>"
 ?>
-
+<br>
 <h3>4 screenshot of development environment</h3>
 <img src="envirnImage.jpg" alt="Environment image" style="width: 75%;">
 </body>
