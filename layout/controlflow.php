@@ -84,21 +84,61 @@ their age, decide if he/she is eligible for voting. (18 or more than 18 years is
     </div>
     <div class="row">
         <div class="col">
-        <input type="submit"><br>
+        <input type="submit"  name="Submit"><br>
         </div>
     </div>
-</form>
+</form><br>
 <?php
-$name = $_POST['name'];
-$age = $_POST['age'];
+if (isset($_POST['Submit'])) {
+    $name = $_POST['name'];
+    $age = $_POST['age'];
 
     if ($age >= 18) {
-        echo $name . ", You Are Eligible For Vote";
+        echo "<h6>".$name . ", You Are Eligible For Vote<h6>";
     } else {
-        echo $name . ", You are not eligible for vote. ";
+        echo "<h6>".$name . ", You are not eligible for vote.<h6> ";
     }
+}
 ?>
+<br>
+<h5>
+4.5 In task 5, you used $_SERVER['HTTP_USER_AGENT']; to get the browser name. 
+Use Switch statement with strops function to print the name of the browser as below: 
+If someone is using Chrome it should print, you are using Goolge Chrome….
+
+</h5>
+<br>
+<?php
+
+ function getBrowser()
+ {
+   $user = $_SERVER['HTTP_USER_AGENT'];
+   $browser = "N/A";
+
+   $browser = [
+     '/msie/i' => 'Internet explorer',
+     '/firefox/i' => 'Firefox',
+     '/safari/i' => 'Safari',
+     '/chrome/i' => 'Chrome',
+     '/edge/i' => 'Edge',
+     '/opera/i' => 'Opera',
+     '/mobile/i' => 'Mobile browser',
+   ];
 
 
+   foreach ($browser as $a => $name) 
+{
+     if (preg_match($a, $user)) 
+{
+       $browser = $name;
+     }
+   }
+   return $browser;
+
+ }
+
+ echo "You are using: " . getBrowser();
+
+?>
 
 <?php include("footer.php")?>
