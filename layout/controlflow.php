@@ -84,7 +84,7 @@ their age, decide if he/she is eligible for voting. (18 or more than 18 years is
     </div>
     <div class="row">
         <div class="col">
-        <input type="submit"  name="Submit"><br>
+        <input type="submit"  name="Submit" value="SUBMIT"><br>
         </div>
     </div>
 </form><br>
