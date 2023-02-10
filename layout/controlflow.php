@@ -109,36 +109,22 @@ If someone is using Chrome it should print, you are using Goolge Chrome….
 </h5>
 <br>
 <?php
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
- function getBrowser()
- {
-   $user = $_SERVER['HTTP_USER_AGENT'];
-   $browser = "N/A";
-
-   $browser = [
-     '/msie/i' => 'Internet explorer',
-     '/firefox/i' => 'Firefox',
-     '/safari/i' => 'Safari',
-     '/chrome/i' => 'Chrome',
-     '/edge/i' => 'Edge',
-     '/opera/i' => 'Opera',
-     '/mobile/i' => 'Mobile browser',
-   ];
-
-
-   foreach ($browser as $a => $name) 
-{
-     if (preg_match($a, $user)) 
-{
-       $browser = $name;
-     }
-   }
-   return $browser;
-
- }
-
- echo "You are using: " . getBrowser();
-
+switch (true){
+    case strpos($user_agent, 'Edge'):
+        echo "You are using Microsoft Edge";
+        break;
+    case strpos($user_agent, 'Chrome'):
+            echo "You are using Google Chrome";
+            break;
+    case strpos($user_agent, 'Firefox'):
+        echo "You are using Mozilla Firefox";
+        break;
+  
+    default:
+        echo "Your browser could not be determined";
+}
 ?>
 
 <?php include("footer.php")?>
