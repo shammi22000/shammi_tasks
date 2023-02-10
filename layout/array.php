@@ -98,6 +98,12 @@ echo "<br><h6>Print only the values of the array elements</h6>";
     foreach ($courses3 as $value) {
     echo $value . "<br>";}
 
+    echo "<br><h6>5.3.4 decending order sort by keys</h6>";
+    $courses3=array("PHP", "HTML", "JavaScript", "CMS", "Project");
+    krsort($courses3);
+    foreach ($courses3 as $value) {
+    echo $value . "<br>";}
+
 ?>
 
 <br>
@@ -147,10 +153,6 @@ echo "<br><h6>Print only the values of the array elements</h6>";
 
     for ($i=0; $i < 5; $i++) {
         echo $temperature[$i] . "<br>";}
-
-
-
-
 
 ?>
 
