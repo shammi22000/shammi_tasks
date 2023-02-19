@@ -6,6 +6,7 @@ $sql="SELECT * FROM studentInfo";
 $result=$conn->query($sql);
 if($result->num_rows>0){
 echo "
+<form method='GET'>
     <table class='table'>
     <tr>
         <th>ID</th>
@@ -30,7 +31,7 @@ echo "
     
     ";
 }
-echo "</table>";
+echo "</table></form>";
 }
 
 else{
